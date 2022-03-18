@@ -1,0 +1,21 @@
+Rosca Nicolae
+322CC
+
+	In fisierul client este implementata functionalitatea de citire de la tastatura a comenzii utilizatorului.
+Exista o relatiie de 1 la 1 intre comenzile introduse si codurile folosite in switch.
+In cazul in care este o comanda valida este trimis requestul potrivit catre server si este
+afisat raspunsul serverului, fie rapsuns de acceptare fie de eroare.
+	In clasa Current sunt procesate requesturile de tip http, cookies-urile, si autorization
+tokens. In clasa exista 4 metode private: processResponse (tokenizeaza raspunsul raw si il proceseaza
+in structura de tip Back), parseResponse (care scrie si suprascrie cookies), tokenizersi(tokenizeaza
+un string in functie de delimitator) si ipConverter (preia string ce reprezinta host si in converteste
+sub forma de ip).
+Metodele publice sunt urmatoarele: Request (deschide un socket la host
+si trimite requestul), get(formuleaza un request GET), httpFormat
+(ce ajuta la formulare requestului de tip POST, adauga, cookies si alte argumente daca exista),
+post(formuleaza un request POST, are in componenta ei un map de stringuri, folosite ca argumente),
+delt(formuleaza un request DELETE).
+Biblioteca folosita este biblioteca NLOHMANN, recomandata in enunt pentru temele
+facute in c++. Accesibilitate bibliotecii a fost ce m-a decis sa aleg, amintind
+de un API-uri asemanator cu cele ale Python-ului,
+
